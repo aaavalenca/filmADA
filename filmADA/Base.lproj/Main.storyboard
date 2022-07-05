@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1287"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OeL-Aq-xa6">
-                                <rect key="frame" x="0.0" y="120" width="414" height="1028"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OeL-Aq-xa6">
+                                <rect key="frame" x="0.0" y="140" width="414" height="1064"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QRS-xS-UZ2">
-                                        <rect key="frame" x="0.0" y="20" width="421" height="988"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QRS-xS-UZ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="421" height="988"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="vIu-M6-oHa" userLabel="Popular Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="421" height="197"/>
@@ -80,13 +80,13 @@
                                                     </collectionView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-gJ-ZD7" userLabel="NowPlaying Stack View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2f7-gJ-ZD7" userLabel="NowPlaying Stack View">
                                                 <rect key="frame" x="0.0" y="205" width="421" height="400"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbI-gC-Q9R" userLabel="NowPlayingView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbI-gC-Q9R" userLabel="NowPlayingView">
                                                         <rect key="frame" x="0.0" y="0.0" width="421" height="50"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-fT-1bg">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="jmC-fT-1bg">
                                                                 <rect key="frame" x="16" y="0.0" width="389" height="31"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag2-DE-Ud3">
@@ -108,9 +108,10 @@
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="jmC-fT-1bg" secondAttribute="trailing" constant="16" id="O6n-RO-r6e"/>
                                                             <constraint firstItem="jmC-fT-1bg" firstAttribute="leading" secondItem="nbI-gC-Q9R" secondAttribute="leading" constant="16" id="mbD-rq-bsI"/>
+                                                            <constraint firstItem="jmC-fT-1bg" firstAttribute="top" secondItem="nbI-gC-Q9R" secondAttribute="top" id="qBk-xa-9dT"/>
                                                         </constraints>
                                                     </view>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bWE-ss-M2Y">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bWE-ss-M2Y">
                                                         <rect key="frame" x="0.0" y="58" width="421" height="342"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -135,7 +136,7 @@
                                                     </collectionView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="SDh-OC-bjJ" userLabel="Upcoming Stack View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="SDh-OC-bjJ" userLabel="Upcoming Stack View">
                                                 <rect key="frame" x="0.0" y="613" width="421" height="375"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV1-2V-b1q" userLabel="UpcomingView">
@@ -193,6 +194,10 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2f7-gJ-ZD7" firstAttribute="top" secondItem="QRS-xS-UZ2" secondAttribute="top" constant="205" id="AeO-CV-4hy"/>
+                                            <constraint firstItem="SDh-OC-bjJ" firstAttribute="top" secondItem="QRS-xS-UZ2" secondAttribute="top" constant="613" id="XGl-UY-tM6"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -215,7 +220,7 @@
                             <constraint firstAttribute="trailing" secondItem="OeL-Aq-xa6" secondAttribute="trailing" id="pfD-kb-Yka"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Featured" largeTitleDisplayMode="never" id="2mV-mO-rPA"/>
+                    <navigationItem key="navigationItem" title="Featured" id="2mV-mO-rPA"/>
                     <size key="freeformSize" width="414" height="1287"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
