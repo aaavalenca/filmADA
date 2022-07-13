@@ -23,6 +23,8 @@
 		8AB2A7C0287DA5030016FBEA /* Movie+Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2A7BB287DA5030016FBEA /* Movie+Popular.swift */; };
 		8AB2A7C1287DA5030016FBEA /* Movie+TrendingThisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2A7BC287DA5030016FBEA /* Movie+TrendingThisWeek.swift */; };
 		8AB2A7C3287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2A7C2287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift */; };
+		8AD2E195287EF20F003E5EF2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2E194287EF20F003E5EF2 /* DetailsViewController.swift */; };
+		8AD2E197287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2E196287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		8AB2A7BB287DA5030016FBEA /* Movie+Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Popular.swift"; sourceTree = "<group>"; };
 		8AB2A7BC287DA5030016FBEA /* Movie+TrendingThisWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingThisWeek.swift"; sourceTree = "<group>"; };
 		8AB2A7C2287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		8AD2E194287EF20F003E5EF2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		8AD2E196287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			children = (
 				8A5C462128734C7200B6A187 /* FeaturedViewController.swift */,
 				8AB2A7C2287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift */,
+				8AD2E194287EF20F003E5EF2 /* DetailsViewController.swift */,
+				8AD2E196287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 				8AB2A7BF287DA5030016FBEA /* Movie+Upcoming.swift in Sources */,
 				8AB2A7C0287DA5030016FBEA /* Movie+Popular.swift in Sources */,
 				8AB2A7BE287DA5030016FBEA /* Movie+NowPlaying.swift in Sources */,
+				8AD2E197287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
+				8AD2E195287EF20F003E5EF2 /* DetailsViewController.swift in Sources */,
 				8AB2A7C1287DA5030016FBEA /* Movie+TrendingThisWeek.swift in Sources */,
 				8A5C462028734C7200B6A187 /* SceneDelegate.swift in Sources */,
 			);
@@ -362,6 +370,7 @@
 				DEVELOPMENT_TEAM = XST7PF6RZ3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = filmADA/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Film Scratch";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -390,6 +399,7 @@
 				DEVELOPMENT_TEAM = XST7PF6RZ3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = filmADA/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Film Scratch";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
