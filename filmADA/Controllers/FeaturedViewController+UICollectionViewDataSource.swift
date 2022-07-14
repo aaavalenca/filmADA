@@ -9,22 +9,34 @@ import UIKit
 
 extension FeaturedViewController: UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        if collectionView == self.popularCollectionView{
+            return makePopularCell(indexPath)
+        } else if collectionView == self.nowPlayingCollectionView {
+            return makeNowPlayingCell(indexPath)
+        } else if collectionView == self.upcomingCollectionView {
+            return makeUpcomingCell(indexPath)
+        } else {
+            return UICollectionViewCell()
+        }
+    }
+    
     fileprivate func makePopularCell(_ indexPath: IndexPath) -> PopularCollectionViewCell {
-        let cell1 = popularCollectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.cellIdentifier, for: indexPath) as? PopularCollectionViewCell
+        let cell = popularCollectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.cellIdentifier, for: indexPath) as? PopularCollectionViewCell
         
-        cell1?.titleLabel.text = popularMovies[indexPath.item].title
-        cell1?.image.image = UIImage(named: popularMovies[indexPath.item].backdrop)
+        cell?.setup(title: popularMovies[indexPath.item].title, image: UIImage(named: popularMovies[indexPath.item].backdrop) ?? UIImage())
         
-        return cell1 ?? PopularCollectionViewCell()
+        return cell ?? PopularCollectionViewCell()
     }
     
     fileprivate func makeNowPlayingCell(_ indexPath: IndexPath) -> NowPlayingCollectionViewCell {
         let cell = nowPlayingCollectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell
         
-        cell?.titleLabel.text = nowPlayingMovies[indexPath.item].title
-        cell?.yearLabel.text = String(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))
-        cell?.image.image = UIImage(named: nowPlayingMovies[indexPath.item].poster)
+        let year :  String = String(nowPlayingMovies[indexPath.item].releaseDate.prefix(4))
         
+        cell?.setup(title: nowPlayingMovies[indexPath.item].title, year: year, image: UIImage(named: nowPlayingMovies[indexPath.item].poster) ?? UIImage())
+
         return cell ?? NowPlayingCollectionViewCell()
     }
     
@@ -39,17 +51,6 @@ extension FeaturedViewController: UICollectionViewDataSource {
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        if collectionView == self.popularCollectionView{
-            return makePopularCell(indexPath)
-        } else if collectionView == self.nowPlayingCollectionView {
-            return makeNowPlayingCell(indexPath)
-        } else if collectionView == self.upcomingCollectionView {
-            return makeUpcomingCell(indexPath)
-        } else {
-            return UICollectionViewCell()
-        }
-    }
     
 }

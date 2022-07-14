@@ -31,7 +31,6 @@ class FeaturedViewController: UIViewController {
         upcomingCollectionView.dataSource = self
         upcomingCollectionView.delegate = self
         
-        
     }
     
     
