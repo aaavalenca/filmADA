@@ -16,4 +16,12 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var yearLabel: UILabel!
+    
+    
+    func setup(title: String, year: String, image: UIImage){
+        titleLabel.text = title
+        yearLabel.text = year
+        imageView.image = image
+    }
+    
 }

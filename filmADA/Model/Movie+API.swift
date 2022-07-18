@@ -11,10 +11,17 @@ extension Movie {
 
     static let urlComponents = URLComponents(string: "https://api.themoviedb.org/")!
     
-    static func popularMoviesAPI() async -> [Movie]{
+    static func moviesAPI(section: String) async -> [Movie]{
         var components = Movie.urlComponents
-        components.path = "/3/movie/popular"
-        // aqui, vão todos os itens que a API pede
+
+        if section == "popular"{
+            components.path = "/3/movie/popular"
+        } else if section == "nowPlaying"{
+            components.path = "/3/movie/now_playing"
+        } else {
+            components.path = "/3/movie/upcoming"
+        }
+                // aqui, vão todos os itens que a API pede
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "language", value: "pt-BR")
@@ -34,6 +41,25 @@ extension Movie {
         }
         
         return []
+    }
+
+    // MARK: - Download de imagens
+    static func downloadImageData(withPath: String) async -> Data {
+        
+        let urlString = "https://image.tmdb.org/t/p/w780\(withPath)"
+        let url: URL = URL(string: urlString)!
+        
+        let session = URLSession.shared
+        session.configuration.requestCachePolicy = .returnCacheDataElseLoad
+        
+        do {
+            let (imageData, response) = try await session.data(from: url)
+            return imageData
+        } catch {
+            print(error)
+        }
+        
+        return Data()
     }
     
     // MARK: - Recuperando a chave da API de um arquivo
