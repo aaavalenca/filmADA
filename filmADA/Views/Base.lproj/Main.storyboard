@@ -847,6 +847,7 @@
                     <connections>
                         <outlet property="searchBar" destination="vgA-Kr-2pg" id="tf9-Yv-ekE"/>
                         <outlet property="searchTableView" destination="zdz-8j-pat" id="iX3-gb-uAA"/>
+                        <segue destination="XjP-60-Wo7" kind="show" identifier="detailSegue" id="G0Y-wL-5er"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kJ-Fy-t6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -855,7 +856,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="75l-E9-6rT"/>
+        <segue reference="G0Y-wL-5er"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
