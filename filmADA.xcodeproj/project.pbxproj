@@ -32,6 +32,8 @@
 		8AE9B91A2885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B9192885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift */; };
 		8AE9B91C2886F51600FD9959 /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B91B2886F51600FD9959 /* TrendingTableViewCell.swift */; };
 		8AE9B91E28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B91D28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift */; };
+		8AE9B9202887561C00FD9959 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B91F2887561C00FD9959 /* SearchViewController.swift */; };
+		8AE9B92228875A5C00FD9959 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B92128875A5C00FD9959 /* SearchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		8AE9B9192885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		8AE9B91B2886F51600FD9959 /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
 		8AE9B91D28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		8AE9B91F2887561C00FD9959 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8AE9B92128875A5C00FD9959 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +111,14 @@
 		8A65CCCC287C485C002F2E80 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8AD2E194287EF20F003E5EF2 /* DetailsViewController.swift */,
 				8A5C462128734C7200B6A187 /* FeaturedViewController.swift */,
 				8AB2A7C2287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift */,
-				8AD2E194287EF20F003E5EF2 /* DetailsViewController.swift */,
 				8AD2E196287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift */,
 				8AE9B9172885EC7B00FD9959 /* TrendingViewController.swift */,
 				8AE9B91D28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift */,
 				8AE9B9192885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift */,
+				8AE9B91F2887561C00FD9959 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				8A65CCC2287C45E2002F2E80 /* PopularCollectionViewCell.swift */,
 				8A65CCC4287C4688002F2E80 /* NowPlayingCollectionViewCell.swift */,
 				8A65CCC6287C46A0002F2E80 /* UpcomingCollectionViewCell.swift */,
+				8AE9B92128875A5C00FD9959 /* SearchTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,10 +242,12 @@
 				8AB2A7BD287DA5030016FBEA /* Movie+TrendingToday.swift in Sources */,
 				8AB2A7C3287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				8A65CCC3287C45E2002F2E80 /* PopularCollectionViewCell.swift in Sources */,
+				8AE9B92228875A5C00FD9959 /* SearchTableViewCell.swift in Sources */,
 				8A5C462228734C7200B6A187 /* FeaturedViewController.swift in Sources */,
 				8A5C461E28734C7200B6A187 /* AppDelegate.swift in Sources */,
 				8AB2A7BF287DA5030016FBEA /* Movie+Upcoming.swift in Sources */,
 				8AB2A7C0287DA5030016FBEA /* Movie+Popular.swift in Sources */,
+				8AE9B9202887561C00FD9959 /* SearchViewController.swift in Sources */,
 				8AB2A7BE287DA5030016FBEA /* Movie+NowPlaying.swift in Sources */,
 				8AD2E197287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
 				8AD2E195287EF20F003E5EF2 /* DetailsViewController.swift in Sources */,

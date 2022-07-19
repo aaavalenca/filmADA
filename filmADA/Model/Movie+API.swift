@@ -29,7 +29,7 @@ extension Movie {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let movieResult = try decoder.decode(MovieResponse.self, from: data)
-            
+                        
             return movieResult.results
         } catch {
             print(error)
@@ -51,12 +51,42 @@ extension Movie {
         ]
         
         let session = URLSession.shared
+                
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MovieResponse.self, from: data)
+
+            return movieResult.results
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }
+    
+    static func searchAPI(searched : String) async -> [Movie]{
+        var components = Movie.urlComponents
+
+        components.path = "/3/search/movie/"
+        
+        // aqui, vão todos os itens que a API pede
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "language", value: "pt-BR"),
+            URLQueryItem(name: "query", value: searched)
+        ]
+                
+        let session = URLSession.shared
         
         do {
             let (data, response) = try await session.data(from: components.url!)
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let movieResult = try decoder.decode(MovieResponse.self, from: data)
+            
+            print(movieResult.results)
             
             return movieResult.results
         } catch {
