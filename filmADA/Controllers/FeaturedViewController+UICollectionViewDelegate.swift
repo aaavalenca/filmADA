@@ -27,7 +27,7 @@ extension FeaturedViewController: UICollectionViewDelegate{
             print("upcoming movie")
             movie = upcomingMovies[indexPath.item]
         }
-        
+                
         self.performSegue(withIdentifier: "detailsSegue", sender: movie)
     }
     

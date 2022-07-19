@@ -27,15 +27,16 @@ extension FeaturedViewController: UICollectionViewDataSource {
         
         let movie = popularMovies[indexPath.item]
         
+        cell?.setup(title: movie.title, image: UIImage())
+
+        
         Task{
-            let imageData = await Movie.downloadImageData(withPath: movie.backdropPath) // /filename.jpg
+            let imageData = await Movie.downloadImageData(withPath: movie.backdropPath)
             let image : UIImage = UIImage(data: imageData) ?? UIImage()
             cell?.setup(title: movie.title, image: image)
         }
         
-        
-        cell?.setup(title: movie.title, image: UIImage())
-        
+            
         return cell ?? PopularCollectionViewCell()
     }
     
@@ -46,14 +47,15 @@ extension FeaturedViewController: UICollectionViewDataSource {
         
         let year :  String = String(movie.releaseDate.prefix(4))
         
+        cell?.setup(title: movie.title, year: year, image: UIImage())
+
+        
         Task{
             let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
             let image : UIImage = UIImage(data: imageData) ?? UIImage()
             cell?.setup(title: movie.title, year: year, image: image)
         }
-        
-        cell?.setup(title: movie.title, year: year, image: UIImage())
-
+    
         return cell ?? NowPlayingCollectionViewCell()
     }
     
@@ -64,13 +66,14 @@ extension FeaturedViewController: UICollectionViewDataSource {
         
         let year : String = String(movie.releaseDate.prefix(4))
         
+        
+        cell?.setup(title: movie.title, year: year, image: UIImage())
+
         Task{
             let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
             let image : UIImage = UIImage(data: imageData) ?? UIImage()
             cell?.setup(title: movie.title, year: year, image: image)
         }
-        
-        cell?.setup(title: movie.title, year: year, image: UIImage())
         
         return cell ?? UpcomingCollectionViewCell()
     }

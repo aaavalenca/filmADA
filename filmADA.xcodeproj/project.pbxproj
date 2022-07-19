@@ -28,6 +28,10 @@
 		8AB2A7C3287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB2A7C2287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 		8AD2E195287EF20F003E5EF2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2E194287EF20F003E5EF2 /* DetailsViewController.swift */; };
 		8AD2E197287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD2E196287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift */; };
+		8AE9B9182885EC7B00FD9959 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B9172885EC7B00FD9959 /* TrendingViewController.swift */; };
+		8AE9B91A2885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B9192885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift */; };
+		8AE9B91C2886F51600FD9959 /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B91B2886F51600FD9959 /* TrendingTableViewCell.swift */; };
+		8AE9B91E28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE9B91D28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		8AB2A7C2287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		8AD2E194287EF20F003E5EF2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8AD2E196287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		8AE9B9172885EC7B00FD9959 /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		8AE9B9192885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		8AE9B91B2886F51600FD9959 /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
+		8AE9B91D28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,9 @@
 				8AB2A7C2287DC15C0016FBEA /* FeaturedViewController+UICollectionViewDataSource.swift */,
 				8AD2E194287EF20F003E5EF2 /* DetailsViewController.swift */,
 				8AD2E196287EF4A8003E5EF2 /* FeaturedViewController+UICollectionViewDelegate.swift */,
+				8AE9B9172885EC7B00FD9959 /* TrendingViewController.swift */,
+				8AE9B91D28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift */,
+				8AE9B9192885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8A5C462328734C7200B6A187 /* Main.storyboard */,
+				8AE9B91B2886F51600FD9959 /* TrendingTableViewCell.swift */,
 				8A5C462828734C7300B6A187 /* LaunchScreen.storyboard */,
 				8A65CCC2287C45E2002F2E80 /* PopularCollectionViewCell.swift */,
 				8A65CCC4287C4688002F2E80 /* NowPlayingCollectionViewCell.swift */,
@@ -216,6 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE9B91C2886F51600FD9959 /* TrendingTableViewCell.swift in Sources */,
+				8AE9B91E28870FC800FD9959 /* TrendingViewController+UITableViewDelegate.swift in Sources */,
 				8AB2A7AC287D95FF0016FBEA /* Movie.swift in Sources */,
 				8A65CCC7287C46A0002F2E80 /* UpcomingCollectionViewCell.swift in Sources */,
 				8A65CCC5287C4688002F2E80 /* NowPlayingCollectionViewCell.swift in Sources */,
@@ -232,7 +246,9 @@
 				8A5E0CC82881AE8A002BD825 /* MovieResponse.swift in Sources */,
 				8AB2A7C1287DA5030016FBEA /* Movie+TrendingThisWeek.swift in Sources */,
 				8A5C462028734C7200B6A187 /* SceneDelegate.swift in Sources */,
+				8AE9B91A2885F34200FD9959 /* TrendingViewController+UITableViewDataSource.swift in Sources */,
 				8A5E0CC628819DA7002BD825 /* Movie+API.swift in Sources */,
+				8AE9B9182885EC7B00FD9959 /* TrendingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

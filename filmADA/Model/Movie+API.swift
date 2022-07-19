@@ -14,14 +14,9 @@ extension Movie {
     static func moviesAPI(section: String) async -> [Movie]{
         var components = Movie.urlComponents
 
-        if section == "popular"{
-            components.path = "/3/movie/popular"
-        } else if section == "nowPlaying"{
-            components.path = "/3/movie/now_playing"
-        } else {
-            components.path = "/3/movie/upcoming"
-        }
-                // aqui, vão todos os itens que a API pede
+        components.path = "/3/movie/\(section)"
+        
+        // aqui, vão todos os itens que a API pede
         components.queryItems = [
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "language", value: "pt-BR")
@@ -43,6 +38,34 @@ extension Movie {
         return []
     }
 
+    
+    static func trendingAPI(window: String) async -> [Movie]{
+        var components = Movie.urlComponents
+
+        components.path = "/3/trending/movie/\(window)"
+        
+        // aqui, vão todos os itens que a API pede
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "language", value: "pt-BR")
+        ]
+        
+        let session = URLSession.shared
+        
+        do {
+            let (data, response) = try await session.data(from: components.url!)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MovieResponse.self, from: data)
+            
+            return movieResult.results
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }
+    
     // MARK: - Download de imagens
     static func downloadImageData(withPath: String) async -> Data {
         
